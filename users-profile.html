@@ -39,7 +39,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">NiceAdmin</span>
+        <span class="d-none d-lg-block">GDG Algiers Event Management</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -210,8 +210,8 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6>LAGGOUNE Omar</h6>
+              <span>Web Designer And Judge</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -347,8 +347,8 @@
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
               <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Kevin Anderson</h2>
-              <h3>Web Designer</h3>
+              <h2>LAGGOUNE Omar</h2>
+              <h3>Web Designer And Judge</h3>
               <div class="social-links mt-2">
                 <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -376,7 +376,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Judge Criterion</button>
                 </li>
 
                 <li class="nav-item">
@@ -394,7 +394,7 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                    <div class="col-lg-9 col-md-8">LAGGOUNE Omar</div>
                   </div>
 
                   <div class="row">
@@ -409,22 +409,22 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Country</div>
-                    <div class="col-lg-9 col-md-8">USA</div>
+                    <div class="col-lg-9 col-md-8">Algeria</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                    <div class="col-lg-9 col-md-8">Sorical, Bab Ezzouar, Dar El-bida, Alger, Algeria</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Phone</div>
-                    <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                    <div class="col-lg-9 col-md-8">0657599501</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                    <div class="col-lg-9 col-md-8">dogie4bogie@gmail.com</div>
                   </div>
 
                 </div>
@@ -539,41 +539,54 @@
 
                   <!-- Settings Form -->
                   <form>
-
+                    <h1>Static Criteria:</h1>
+                    <h5>Source Code | Design | Presentation</h5>
                     <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
-                      <div class="col-md-8 col-lg-9">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
-                          <label class="form-check-label" for="changesMade">
-                            Changes made to your account
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="newProducts" checked>
-                          <label class="form-check-label" for="newProducts">
-                            Information on new products and services
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="proOffers">
-                          <label class="form-check-label" for="proOffers">
-                            Marketing and promo offers
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="securityNotify" checked disabled>
-                          <label class="form-check-label" for="securityNotify">
-                            Security alerts
-                          </label>
-                        </div>
+                      <label for="inputText" class="col-sm-2 col-form-label">Criteria</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Coefficient</label>
+                      <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
                       </div>
                     </div>
 
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Challenge</label>
+                      <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
                     </div>
-                  </form><!-- End settings Form -->
+
+                    <div class="row mb-3">
+                      <label for="inputText" class="col-sm-2 col-form-label">Criteria Description</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+    
+                    <div class="row mb-3">
+                      <label class="col-sm-2 col-form-label">Add</label>
+                      <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Save Criteria</button>
+                      </div>
+                    </div>
+    
+                  </form><!-- End General Form Elements -->
 
                 </div>
 
