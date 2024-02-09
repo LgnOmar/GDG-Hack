@@ -10,3 +10,6 @@ from django.db import connection
 def display_chall(request):
     challenge=Challenge.objects.all()
     return render(request,"disp_Chall.html",{"C1":challenge})
+def display_sub(request):
+    submission=Submission.objects.all()
+    return render(request,"disp_sub.html",{"S1":submission})
