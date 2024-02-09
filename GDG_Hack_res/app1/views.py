@@ -1,10 +1,11 @@
 from asyncio.windows_events import NULL
 from uuid import RFC_4122
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .models import Challenge, Submission, Judge, Critic
-from .forms import CriticForm
+
 from django.http import JsonResponse
 import  json
+
 from django.db.models import Q
 from django.db.models import fields
 from django.db import connection
@@ -29,3 +30,4 @@ def add_critic(request):
         }
         # return redirect("listing") # redirection vers la page de l’url: listing
         return JsonResponse(res)
+
