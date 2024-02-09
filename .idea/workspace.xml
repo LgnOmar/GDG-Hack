@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="47b7730a-4418-4087-b8d5-1d5fac5d0b57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GDG_Hack_res/app1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/GDG_Hack_res/app1/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GDG_Hack_res/app1/templates/add_critic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GDG_Hack_res/app1/templates/disp_criti.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GDG_Hack_res/app1/templates/disp_sub.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2c7dlDt5Fnd1rE2TRtSYgLxraGZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,7 +41,8 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "recycle2",
-    "last_opened_file_path": "/home/tahaboumeddine/Documents/GitHub/GDG-Hack"
+    "last_opened_file_path": "/home/tahaboumeddine/Documents/GitHub/GDG-Hack",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

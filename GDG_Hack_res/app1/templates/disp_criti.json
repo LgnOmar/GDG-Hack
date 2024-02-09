@@ -1,0 +1,13 @@
+{
+  "title": "Display Characteristics",
+  "body": {
+    "heading": "Display Characteristics",
+    "list_items": [
+      {
+        "critic_name": "{{critic.cri_name}}",
+        "critic_description": "{{critic.cri_desc}}",
+        "coefficient": "{{critic.coef}}"
+      }
+    ]
+  }
+}

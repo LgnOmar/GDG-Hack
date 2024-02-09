@@ -1,0 +1,15 @@
+{
+  "title": "Create Critic",
+  "body": {
+    "heading": "Create Critic",
+    "form": {
+      "method": "post",
+      "fields": [
+        {
+          "type": "csrf_token"
+        }
+      ],
+      "submit_button": "Submit"
+    }
+  }
+}
