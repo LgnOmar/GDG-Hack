@@ -2,10 +2,13 @@ from asyncio.windows_events import NULL
 from uuid import RFC_4122
 from django.shortcuts import render
 from .models import Challenge, Submission, Judge, Critic
+<<<<<<< HEAD
 
 from django.http import JsonResponse
 import  json
 
+=======
+>>>>>>> parent of b3d3e83 (changes)
 from django.db.models import Q
 from django.db.models import fields
 from django.db import connection
@@ -19,6 +22,7 @@ def display_sub(request):
 def display_criti(request):
     criti=Critic.objects.all()
     return render(request,"disp_criti.html",{"CR1":criti})
+<<<<<<< HEAD
 
 def add_critic(request):
     if request.method == 'POST':
@@ -30,3 +34,5 @@ def add_critic(request):
         }
         return JsonResponse(res)
 
+=======
+>>>>>>> parent of b3d3e83 (changes)
