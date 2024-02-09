@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Patients</title>
+    <style>
+        :root {
+      --main-white-color: #f1f5f7;
+      --main-black-color: black;
+      --main-purple-color: #9e89b8;
+      --main-blue-color: #ffffff;
+    }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            
+            text-align: center;
+            background: var(--main-purple-color) url("/static/RDV.jpg") no-repeat center/cover;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        .patient-container {
+            display: flex;
+            flex-wrap: wrap; /* Permettre le passage à la ligne pour les boîtes */
+            justify-content: center; /* Centrer horizontalement les boîtes */
+            gap: 10px; /* Ajouter une distance de 10px entre les boîtes */
+            margin: 70px 70px 70px 0; /* Ajouter une marge de 70px à gauche, en haut et en bas, 0 à droite */
+        }
+
+        .patient-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin: 15px; /* Marge autour de chaque boîte */
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            width: 250px; /* Définir une largeur fixe pour toutes les boîtes */
+            text-align: left; /* Aligner le texte à gauche */
+        }
+
+        .patient-card:hover {
+            transform: scale(1.05);
+        }
+
+        .patient-card::before {
+            
+            color: #e74c3c;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+        }
+
+        .patient-card span {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    body {
+      font: 16px/1.5 "Dosis", sans-serif;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .wrapper>* {
+      padding: 20px;
+    }
+
+    .page-header {
+      background: var(--main-white-color);
+    }
+
+    .page-header nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-header ul {
+      display: flex;
+      order: 1;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    .page-header ul li:not(:last-child) {
+      padding-right: 15px;
+    }
+
+    .page-header .cta-contact {
+      font-family: inherit;
+      font-size: 1.2rem;
+      padding: 5px 18px;
+      border: 1px solid;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--main-white-color);
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: var(--main-black-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #fbf8f8;
+    }
+
+    
+
+    .page-main div {
+      max-width: 500px;
+      margin-top: -50px;
+    }
+
+    .page-main h1{
+      margin-bottom:-05px;
+      font-size: 60px;
+      
+    }
+    
+    .page-main p+p {
+      margin-top: 00px;
+    }
+
+    .page-footer {
+      display: flex;
+      flex-direction: column-reverse;
+      background: var(--main-white-color);
+    }
+
+    .page-footer ul {
+      display: flex;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .page-footer ul li:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @media screen and (min-width: 550px) {
+      .page-header ul {
+        width: auto;
+        margin-top: 0;
+      }
+
+      .page-header .cta-contact {
+        order: 1;
+      }
+
+      .page-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .page-footer ul {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      body {
+        font-size: 18px;
+      }
+
+      .page-main {
+        padding-left: 90px;
+      }
+    }
+    /* Add this CSS inside the <style> element */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--main-white-color);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 14.5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: var(--main-black-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.RDV{
+  border: 3px solid #658eaa; /* Couleur de la bordure bleue */
+  color: #bdc2d0;
+  background-color: #658eaa; 
+  border-radius: 2px; 
+  font-size: 32px;
+  padding: 05px 70px;
+  
+  
+}
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <nav>
+          <h2 class="logo">LOGO</h2>
+          
+                  <h1>Liste des Dossier cardiologie </h1>
+                
+          
+          <button class="cta-contact">log out</button>
+        </nav>
+      </header>
+    
+    <div class="patient-container">
+        {% for P in D %}
+            <div class="patient-card">
+                <span>La date :</span> {{P.patient}}<br>
+                <span>L'heure:</span> {{P.prescriptions}}<br>
+                <span>statut :</span> {{P.Traitement_medical}}<br>
+                <span>Le Medcin:</span> {{P.Dpt}}<br>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

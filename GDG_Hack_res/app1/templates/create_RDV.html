@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation RDV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url("/static/RDV.jpg");
+            background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #b8f5bb;
+        }
+
+        .top {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .form:hover {
+            transform: scale(1.05);
+        }
+
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            width: 50%;
+            margin: auto; /* Centre le bouton */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .button {
+            text-align: center;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+        .button_liste{
+            border-radius: 5px;
+            background-color: #ea830d;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            width: 50%;
+            margin: auto;
+            border: none;
+            margin-top: 5px;
+            padding: 10px;
+            margin-left: 100px;
+        }
+        #recherche{
+            background-color: #0d7cea;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h4>Cree RDV</h4>
+    </div>
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="button">
+                <input type="submit" value="Valider">
+                <br>
+            </div>
+            
+            <h4>{{ message }}</h4>
+        </form>
+        <a href="{% url 'listeRDV' %}"><button class="button_liste">liste des rdv</button></a>
+
+        <a href="{% url 'rechercher_RDV' %}"><button class="button_liste" id="recherche">recherche rdv</button></a>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de patients</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background:  url("/static/RDV.jpg") no-repeat center/cover;
+        }
+        form {
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        form:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        li span {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="search">Entrer le nom ou le NSS du patient :</label>
+        <input type="text" name="recherche" id="search">
+        <button type="submit">Démarrer la recherche</button>
+        <h4>Résultats de la recherche :</h4>
+        <ul>
+            {% for patient in patients %}
+                <li>
+                    <span>Nom du patient :</span> {{ patient.nom_patient }}<br>
+                    <span>Prénom :</span> {{ patient.prenom_patient }}<br>
+                    <span>NSS :</span> {{ patient.NSS }}<br>
+                    <span>Adresse :</span> {{ patient.Adresse }}<br>
+                    <span>Numéro de téléphone :</span> {{ patient.num_tel_patient }}<br>
+                    <span>Date de naissance :</span> {{ patient.date_naissance }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+    </form>
+</body>
+</html>
