@@ -34,3 +34,10 @@ class Critic(models.Model):
     cri_chall=models.ForeignKey(Challenge,on_delete=models.CASCADE)
     def __str__(self):
         return(self.cri_name)
+
+
+class Review(models.Model):
+    note=models.IntegerField()
+    submission=models.ForeignKey(Submission,on_delete=models.CASCADE)
+    judge = models.ForeignKey(Judge, on_delete=models.CASCADE)
+    critic = models.ForeignKey(Critic, on_delete=models.CASCADE)
