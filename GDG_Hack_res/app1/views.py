@@ -13,3 +13,6 @@ def display_chall(request):
 def display_sub(request):
     submission=Submission.objects.all()
     return render(request,"disp_sub.html",{"S1":submission})
+def display_criti(request):
+    criti=Critics.objects.all()
+    return render(request,"disp_criti.html",{"CR1":criti})
