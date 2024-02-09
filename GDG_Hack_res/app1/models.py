@@ -22,26 +22,15 @@ class Judge (models.Model):
     Jfirst_name=models.CharField(max_length=50)
     Jlast_name=models.CharField(max_length=50)
     Jtitle=models.CharField(max_length=50)
-#   Departement=models.ForeignKey(Departement,on_delete=models.CASCADE)
-
     def __str__(self):
         return(self.Jlast_name)
 
 
-class Critics(models.Model):
+class Critic(models.Model):
     cri_name=models.CharField(max_length=50)
     cri_desc=models.CharField(max_length=2000)
-    coef = models.IntegerField()
+    cri_coef=models.IntegerField()
+    cri_judge=models.ForeignKey(Judge,on_delete=models.CASCADE)
+    cri_chall=models.ForeignKey(Challenge,on_delete=models.CASCADE())
     def __str__(self):
         return(self.cri_name)
-
-
-class Review(models.Model):
-    rev_note = models.IntegerField()
-    Judge=models.ForeignKey(Judge,on_delete=models.CASCADE)
-    Challenge=models.ForeignKey(Challenge,on_delete=models.CASCADE)
-
-    def __str__(self):
-        return(self.rev_note)
-
-
