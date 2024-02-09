@@ -31,6 +31,6 @@ class Critic(models.Model):
     cri_desc=models.CharField(max_length=2000)
     cri_coef=models.IntegerField()
     cri_judge=models.ForeignKey(Judge,on_delete=models.CASCADE)
-    cri_chall=models.ForeignKey(Challenge,on_delete=models.CASCADE())
+    cri_chall=models.ForeignKey(Challenge,on_delete=models.CASCADE)
     def __str__(self):
         return(self.cri_name)
