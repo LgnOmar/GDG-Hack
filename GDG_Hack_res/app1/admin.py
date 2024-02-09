@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Departement,Medecin,Patient,Dossier_Medical,RDV
+from .models import Challenge, Submission, Judge, Critics, Review
+
 # Register your models here.
 
 
-
-admin.site.register(Departement)
-admin.site.register(Medecin)
-admin.site.register(Patient)
-admin.site.register(Dossier_Medical)
-admin.site.register(RDV)
+admin.site.register(Challenge)
+admin.site.register(Submission)
+admin.site.register(Judge)
+admin.site.register(Critics)
+admin.site.register(Review)
