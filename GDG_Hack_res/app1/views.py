@@ -28,6 +28,5 @@ def add_critic(request):
             'message': 'added successfully',
 
         }
-        # return redirect("listing") # redirection vers la page de l’url: listing
         return JsonResponse(res)
 
