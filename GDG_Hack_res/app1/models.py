@@ -6,7 +6,7 @@ class Challenge(models.Model):
     chall_name=models.CharField(max_length=50)
     chall_desc=models.CharField(max_length=2000)
     def __str__(self):
-        return(self.chall_num)
+        return(self.chall_name)
 
 class Submission(models.Model):
     team_name=models.CharField(max_length=50)

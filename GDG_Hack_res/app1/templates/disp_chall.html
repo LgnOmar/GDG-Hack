@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1> Display challenges </h1>
+<ol>
+{% for challenge in C1 %}
+<li>La commande {{challenge.chall_num}} nommée {{challenge.chall_name}} a comme produit : {{challenge.chall_desc}} . </li>
+{% endfor %}
+</ol>
+</body>
+</html>
